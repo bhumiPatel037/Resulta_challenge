@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ACME Sports</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        textarea {
+          width: 100%;
+          min-height: 40rem;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 1.5rem;
+          line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<script src={{ url_for('static', filename='app.js') }}></script>
+<nav class="navbar navbar-default" style="background-color: #353030;font-family:Monospace">
+  <div class="container-fluid">
+    <div class="navbar-header" style="height:30px;">
+         <a class="navbar-brand" style="color:#FF6B00"><b> ACME Sports</b></a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="col-lg-12">
+    <div class="row">
+        <h4>Please select dates to get a list of NFL events: </h4>
+        <br/>
+                          <label for="startDate"> Start Date: </label>
+                          <input type="date" name="startDate" id="startDate" required>
+
+            </div>
+         <div class="row">
+                          <label for="endDate">End Date:</label>
+                          <input type="date" name="endDate" id="endDate" required>
+            </div>
+        </br>
+        <div class="row">
+         <input type="button" value="submit" onclick="onSubmitData()">
+        </div>
+        <hr>
+        <div class="row">
+        <h4>List of NFL events:</h4>
+         <textarea name="" id="jsonResponse" cols="30" rows="10" style="border:groove 6px grey;"></textarea>
+        </div>
+    </div>
+</div>
+</body>
+</html>
